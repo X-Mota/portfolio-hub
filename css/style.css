@@ -1,16 +1,125 @@
+:root {
+  --azul: #0077b5;
+  --escuro: #1f2a44;
+  --fundo: #f4f6fb;
+  --texto: #333;
+  --cinza: #6b7280;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
-  background-color: #f5f5f5;
-  color: #333;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.6;
 }
 
-h1 {
-  color: #2c3e50;
+/* Topo */
+.hero {
+  background: linear-gradient(135deg, var(--escuro), var(--azul));
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
 }
 
-a {
-  color: #0077b5;
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: 2.6rem;
+}
+
+.hero p {
+  margin: 0 auto 25px;
+  max-width: 550px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Botões */
+.botao {
+  display: inline-block;
+  padding: 10px 22px;
+  margin: 5px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  background: #fff;
+  color: var(--azul);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.botao:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.botao.contorno {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+/* Conteúdo */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h2 {
+  color: var(--escuro);
+  border-left: 5px solid var(--azul);
+  padding-left: 12px;
+  margin-top: 40px;
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.cartao {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cartao:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+}
+
+.cartao h3 {
+  margin-top: 0;
+  color: var(--escuro);
+}
+
+.cartao p {
+  color: var(--cinza);
+  margin-bottom: 15px;
+}
+
+.cartao a {
+  color: var(--azul);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cartao a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: var(--escuro);
+  color: #cbd5e1;
+  margin-top: 40px;
 }
